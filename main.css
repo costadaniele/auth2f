@@ -1,3 +1,10 @@
+:root {
+	--primary-color: #fd951f;
+	--bg-color: #130f0d;
+	--text-color: #f0f0f5;
+	--light-color: rgba(255, 255, 255, 0.04);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -13,86 +20,66 @@ body {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	background-color: #333333;
-	color: #ffca3a;
+	background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.formulario, .toast-error, .toast-success {
+	background: var(--light-color);
+    width: 100%;
+    max-width: 500px;
+    margin: 32px auto;
+    padding: 32px 64px;
+    /*um ao lado do outro*/
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+	color: var(--primary-color);
 }
 
 h1 {
-	width: 100%;
-	max-width: 500px;
-	margin: 32px auto;
-	padding: 32px 64px;
-	text-align: center;
-}
-
-h3 {
-  max-width: 500px;
-	margin: 32px auto;
-	padding: 32px 64px;
-	text-align: center;
-}
-
-strong {
-  color: #ede7b1;
-}
-
-.topo a, .rodape a {
-	text-decoration: none;
-	color: #ffca3a;
-	font-family: 'Montserrat', sans-serif;
-}
-
-.topo a:hover {
-	color: #ede7b1
-}
-
-.rodape a:hover {
-	color: #ede7b1
+	margin-bottom: 60px;
 }
 
 input {
-	background: #fff;
-	width: 100%;
-	max-width: 400px;
-	margin: 10px auto;
-	padding: 12px 24px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-	list-style: none;
-	color: #000
+	margin-bottom: 24px;
+	position: relative;
 }
 
-label, p {
-	display: flex;
-	justify-content: center;
-	align-items: start
+input,
+button {
+    /* reset appereance */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* box */
+    width: 100%;
+    padding: 16px 0;
+    border:none;
+    border-bottom: 1px solid var(--primary-color);
+    background-color: transparent;
+    outline: none;
+
+    /* text */
+    color: var(--text-color);
+    font-size: 1em;
 }
 
-.rodape {
-	width: 100%;
-	max-width: 500px;
-	margin: 0px auto;
-	display: flex;
-	justify-content: space-around
-}
 
 button {
-	font-family: 'Montserrat', sans-serif;
-	background: rgba(255, 255, 255, 0.04);
-	width: 100%;
-	max-width: 200px;
-	margin: 20px auto;
-	padding: 12px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-	list-style: none;
-	color: #f6f4d2
+	margin-top: 16px;
+	background-color: var(--primary-color);
 }
 
-a {
-	text-decoration: none
+.ok {
+  color: green;
+  font-size: 40px;
+}
+
+.no {
+  color: red;
+  font-size: 40px;
 }
